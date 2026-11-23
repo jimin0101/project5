@@ -1,11 +1,36 @@
-<div align="center">
+# 자격백서 (한국 자격증 최신 학습·합격 전략 아카이브)
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+한국 자격증(112종+ 수록 및 직접 입력 조회 지원)의 **핵심 개념, 기출문제·CBT 출처, 추천 인강(사용 교재·공개 합격률), 문제집 장단점 비교(개념/문제 비중), 면접·구술 Q&A, 연도별 합격률·경쟁률·취업률**을 Google 검색 그라운딩 기반으로 교차 검증해 제공하는 수험 전략 웹 애플리케이션입니다.
 
-  <h1>Built with AI Studio</h2>
+## 주요 기능
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+- **112종+ 한국 주요 자격증 카탈로그 & 직접 입력 조회**: 국가기술자격, 국가전문자격, 국가공인민간자격, 어학·IT·금융·의료·기능 자격까지 약칭(`정처기`, `컴활`, `산안기`, `빅분기`, `투운사` 등)으로 검색하거나 목록 외 자격증을 직접 입력해 조회할 수 있습니다.
+- **6개 영역 선택형 맞춤 리포트**: 필요한 영역만 골라 한 번에 조회할 수 있습니다.
+- **거짓 정보 방지 원칙**: 확인되지 않은 합격률·경쟁률·취업률은 임의로 생성하지 않고 `공식 미공개`로 명시하며, 검증 출처 링크를 함께 제공합니다.
+- **추가 팩트체크 Q&A & 내 학습 보관함**: 리포트 하단에서 추가 질문을 실시간 조회하고, 자주 보는 리포트를 브라우저 보관함에 저장할 수 있습니다.
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+## 로컬 실행 방법
 
-</div>
+```bash
+npm install
+```
+
+루트 경로에 `.env` 파일을 생성하고 Gemini API 키를 입력합니다.
+
+```env
+GEMINI_API_KEY="YOUR_GEMINI_API_KEY"
+```
+
+개발 서버 실행 (`http://localhost:3000`):
+
+```bash
+npm run dev
+```
+
+## Vercel 배포 방법
+
+1. 이 저장소를 GitHub에 업로드합니다.
+2. [Vercel](https://vercel.com)에서 `Add New Project`로 해당 GitHub 저장소를 연결합니다.
+3. **Environment Variables**에 아래 변수를 추가합니다.
+   - `GEMINI_API_KEY`: Google AI Studio에서 발급받은 Gemini API 키
+4. `Deploy`를 클릭하면 `vercel.json` 설정(`npm run build` + `api/*.ts` 서버리스 함수)에 따라 자동 배포됩니다.

@@ -1,0 +1,6 @@
+{
+  "name": "자격백서 — 한국 자격증 최신 학습·합격 전략 아카이브",
+  "description": "자격증별 최신 기출문제, 핵심 개념, 강사·교재 비교 분석, 면접 Q&A, 합격률·경쟁률·취업률 통계를 실시간 한국 공식 자료 기반으로 제공하는 수험 전략 플랫폼",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
